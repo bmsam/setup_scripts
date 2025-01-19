@@ -62,6 +62,10 @@ EOF"
 print_header "Please enter your GitHub username to fetch your SSH keys:"
 read -p "GitHub username: " GITHUB_USERNAME
 
+# Fetch SSH key from GitHub
+print_header "Fetching SSH key from GitHub for user $GITHUB_USERNAME..."
+SSH_KEY=$(fetch_ssh_key "$GITHUB_USERNAME")
+
 # Create .bash_aliases and add aliases
 print_header "Creating .bash_aliases with aliases..."
 cat <<EOF > ~/.bash_aliases
@@ -79,10 +83,6 @@ source ~/.bashrc
 print_header "Setting up SSH authorized_keys..."
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-
-# Fetch SSH key from GitHub
-print_header "Fetching SSH key from GitHub for user $GITHUB_USERNAME..."
-SSH_KEY=$(fetch_ssh_key "$GITHUB_USERNAME")
 
 # Check if authorized_keys exists and append the key if it does
 if [[ -f ~/.ssh/authorized_keys ]]; then
