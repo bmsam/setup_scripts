@@ -100,8 +100,10 @@ fi
 chmod 600 ~/.ssh/authorized_keys
 
 # Ask the user if they want to configure a static IP
-print_header "Would you like to configure a static IP? (y/n)"
-read -r CONFIGURE_STATIC_IP
+# print_header "Would you like to configure a static IP? (y/n)"
+# read -r CONFIGURE_STATIC_IP
+read -p "Would you like to configure a static IP? (y/n): " CONFIGURE_STATIC_IP
+
 if [[ "$CONFIGURE_STATIC_IP" =~ ^[Yy]$ ]]; then
     configure_static_ip
 else
