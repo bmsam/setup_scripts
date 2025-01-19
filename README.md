@@ -35,12 +35,12 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/bmsam/setup_scripts.git
    ```
 
 2. **Navigate to the Directory**:
    ```bash
-   cd your-repository
+   cd setup_scripts
    ```
 
 3. **Make the Script Executable**:
