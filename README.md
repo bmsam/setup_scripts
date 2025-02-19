@@ -35,7 +35,7 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/bmsam/setup_scripts.git
+   git clone https://github.com/samsonzone/setup_scripts.git
    ```
 
 2. **Navigate to the Directory**:
